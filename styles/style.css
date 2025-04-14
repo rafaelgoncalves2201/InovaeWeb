@@ -1,0 +1,686 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #1a2a36 0%, #121212 100%);
+    color: #fff;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo-img {
+    max-height: 300px;
+    height: auto;
+    width: auto;
+}
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #0e1e2b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 50px; /* Só padding à direita */
+    padding-left: 0;      /* Remove espaço à esquerda */
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 200px;
+    align-items: center;
+}
+
+.logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 20px; /* Só um espacinho pra não ficar grudado demais */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #58a6ff;
+}
+
+/* Hero Section */
+.hero {
+    padding: 200px 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-text {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-text h1 span {
+    color: #58a6ff;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: right;
+}
+
+.hero-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.btn {
+    background-color: #58a6ff;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background-color: #4a8fe7;
+    transform: translateY(-2px);
+}
+
+/* Benefits Section */
+.benefits {
+    padding: 60px 0;
+}
+
+.benefits-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.benefit-item {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    padding: 30px 20px;
+    transition: transform 0.3s;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-icon {
+    background-color: rgba(88, 166, 255, 0.1);
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.benefit-icon i {
+    color: #58a6ff;
+    font-size: 36px;
+}
+
+.benefit-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.benefit-description {
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+/* Services Section */
+.services {
+    padding: 80px 0;
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-card {
+    flex: 1;
+    min-width: 300px;
+    background-color: #f5f7fa;
+    color: #333;
+    border-radius: 10px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-icon i {
+    color: #58a6ff;
+    font-size: 40px;
+}
+
+.service-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.service-description {
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+/* Portfolio */
+.portfolio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+
+    background-color: #1E2F3F;
+    padding: 50px;
+}
+
+.titlePortfolio h1 {
+    font-size: 33px;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.flexCardPortfolio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 60px;
+}
+
+.portfolioCard {
+    padding: 20px 40px;
+    background-color: #58a6ff27;
+    border-radius: 7px;
+    transition: 0.2s;
+}
+
+.portfolioCard:hover {
+    background-color: #58a6ff56;
+}
+
+.imgPortfolio {
+    width: 300px;
+    border-radius: 7px;
+}
+
+.infoCardPortfolio {
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+
+.viewProject {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.viewProject a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Depoimentos */
+/* Estilo geral */
+.testimonials {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  /* Título */
+  .testimonials h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: #fff;
+  }
+  
+  /* Carrossel container */
+  .carousel {
+    position: relative;
+    max-width: 350px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  /* Slides */
+  .testimonial-slide {
+    display: none;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .testimonial-slide.active {
+    display: block;
+  }
+  
+  /* Cada depoimento */
+  .testimonial {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  /* Imagem do cliente */
+  .testimonial img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  /* Espaço para estrelas */
+  .testimonial .stars {
+    margin-bottom: 10px;
+    /* Aqui você pode colocar os ícones ou imagens de estrelas */
+  }
+  
+  /* Texto */
+  .testimonial .quote {
+    font-style: italic;
+    font-size: 19px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  /* Autor */
+  .testimonial .author {
+    font-weight: bold;
+    font-size: 19px;
+    color: #333;
+  }
+  
+
+/* Contact Section */
+.contact {
+    padding: 80px 0;
+    background-color: #1a2a36;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    opacity: 0.8;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 17px;
+}
+
+.contact .form-group input,
+.contact .form-group textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #121212;
+    color: #fff;
+    font-size: 16px;
+    resize: none;
+    width: 100%;
+    outline: none;
+
+    transition: 0.4s;
+}
+
+.form-group input:focus {
+    border-color: #4a8fe7;
+    background-color: #252525;
+    outline: none;
+}
+
+/* textarea */
+#mensagem:focus {
+    border-color: #4a8fe7;
+    background-color: #252525;
+    outline: none;
+}
+
+.contact .form-group textarea {
+    height: 150px;
+}
+
+.contact .btn {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #58a6ff;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact .btn:hover {
+    background-color: #4a8fe7;
+}
+
+/* Footer */
+.footer {
+    background-color: #1a1a1a;
+    color: #eee;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .footer-logo-box {
+    flex: 1 1 200px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-logo {
+    width: 200px;
+    height: auto;
+  }
+  
+  .footer-links,
+  .footer-social {
+    flex: 1 1 200px;
+    margin-bottom: 20px;
+  }
+
+  .footer-links ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .footer-links h3,
+  .footer-social h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links ul li a {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+    transition: color 0.3s;
+  }
+  
+  .footer-links ul li a:hover {
+    color: #fff;
+  }
+  
+  .footer-social .icons img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+  }
+  
+  .footer-social .icons img:hover {
+    transform: scale(1.1);
+  }
+  
+  .footer-bottom {
+    background-color: #252525;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+  /* Responsivo */
+  @media (max-width: 600px) {
+    .footer-links {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+
+/* Responsive */
+@media (max-width: 992px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-text {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+    
+    .benefits-container, .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .benefit-item, .service-card {
+        max-width: 500px;
+        margin-bottom: 20px;
+    }
+
+    .contact form {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 0;
+    }
+    
+    .header-content {
+        flex-direction: column;
+    }
+    
+    .logo {
+        margin-bottom: 15px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin: 5px 15px;
+    }
+    
+    .hero {
+        padding: 130px 0 60px;
+    }
+    
+    .hero-text h1 {
+        font-size: 32px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+}
+
+/* Esconde o botão em telas grandes */
+.mobile-menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #0e1e2b;
+        position: absolute;
+        top: 100px;
+        left: 0;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+        position: absolute;
+        right: 20px;
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding: 10px 20px;
+      }
+      
+      /* Deixa a logo exatamente no centro absoluto */
+      .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      
+      /* Ícone do menu no mobile */
+      .mobile-menu-icon {
+        display: none;
+      }
+      
+      /* Esconde menu no mobile */
+      @media (max-width: 768px) {
+        nav {
+          display: none;
+          position: absolute;
+          top: 60px;
+          right: 0;
+          width: 100%;
+          background: #000;
+          flex-direction: column;
+        }
+      
+        nav.active {
+          display: flex;
+        }
+      
+        .mobile-menu-icon {
+          display: block;
+          z-index: 2;
+        }
+      }
+}

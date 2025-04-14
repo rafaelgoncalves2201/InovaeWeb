@@ -1,0 +1,55 @@
+@media screen and (max-width: 600px) { /* CELULAR */ 
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo-img {
+        width: 300px;
+        margin-right: 20px;
+    }
+
+    #h1-inicio {
+        font-size: 25px;
+    }
+
+    .benefits {
+        padding: 0px 0;
+    }
+
+    .benefits-container {
+        gap: 5px;
+    }
+
+    .portfolio {
+        gap: 0px;
+    }
+
+    .flexCardPortfolio {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 40px;
+    
+        background-color: #1E2F3F;
+        padding: 20px;
+    }
+
+    .portfolioCard {
+        padding: 35px 20px;
+        background-color: #58a6ff27;
+        border-radius: 7px;
+        transition: 0.2s;
+    }
+
+    .footer-links ul li a{
+        margin: -5px;
+    }
+
+    .hero-image img {
+        width: 350px;
+    }
+}
