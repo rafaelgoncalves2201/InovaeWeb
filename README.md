@@ -38,13 +38,13 @@ InovaeWeb/
 
 ## ✏️ Personalização
 
-- **Textos e imagens**: Edite o `index.html` com as informações da sua empresa.
+- **Textos e imagens**: Edite o `index.html` com as informações.
 - **Estilo visual**: Altere o `style.css` para mudar cores, fontes ou layout.
 - **Funcionalidades**: O `script.js` pode ser expandido para adicionar novas interações como sliders, integração com APIs, etc.
 
 ## 📬 Contato
 
-Esse projeto pode ser usado como base para sites de outras empresas. Para personalizações ou criação de um site profissional, entre em contato com a equipe da Inovae.
+Esse projeto não pode ser usado como base para sites de outras empresas sem ser feito por nossa empresa. Para personalizações ou criação de um site profissional, entre em contato com a equipe da InovaeWeb.
 
 ## 📄 Licença
 
