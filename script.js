@@ -59,3 +59,9 @@ index = (index + 1) % slides.length;
 // Mostra o primeiro e inicia o loop
 showSlide();
 setInterval(showSlide, 5000); // muda a cada 5 segundos
+
+// x para remover o pop-up do whatsapp
+function fecharTexto() {
+  const box = document.getElementById("whatsappTextBox");
+  box.style.display = "none";
+}
