@@ -43,6 +43,8 @@ header {
     justify-content: space-between;
     gap: 200px;
     align-items: center;
+    width: 100%;
+    position: relative;
 }
 
 .logo {
@@ -51,6 +53,25 @@ header {
     align-items: center;
     margin-left: -50px;
     margin-top: 15px;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    z-index: 1000;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: #58a6ff;
+    transition: all 0.3s ease;
 }
 
 nav ul {
@@ -72,6 +93,21 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #36699e;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    z-index: 998;
+}
+
+.overlay.active {
+    display: block;
 }
 
 /* Hero Section */
@@ -567,23 +603,76 @@ nav ul li a:hover {
 @media (max-width: 768px) {
     header {
         padding: 15px 0;
+        height: 80px;
     }
     
     .header-content {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0;
+        padding: 0 20px;
     }
     
     .logo {
-        margin-bottom: 15px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 16px;
+        margin-bottom: 0;
+    }
+    
+    .logo-img {
+        max-height: 300px;
+        height: auto;
+        width: auto;
+        object-fit: contain;
+    }
+    
+    .hamburger {
+        display: block;
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    /* Animação do hamburger para X */
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+    
+    nav {
+        display: none;
     }
     
     nav ul {
-        flex-wrap: wrap;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: #1B242B;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
+        transition: left 0.3s ease;
+    }
+    
+    nav ul.active {
+        left: 0;
     }
     
     nav ul li {
-        margin: 5px 15px;
+        margin: 15px 0;
     }
     
     .hero {
@@ -597,76 +686,21 @@ nav ul li a:hover {
     .section-title {
         font-size: 28px;
     }
-}
-
-/* Esconde o botão em telas grandes */
-.mobile-menu-icon {
-    display: none;
-    cursor: pointer;
-}
-
-/* Mobile styles */
-@media (max-width: 768px) {
-    nav {
-        display: none;
+    
+    .flexCardPortfolio {
         flex-direction: column;
-        align-items: center;
+        gap: 30px;
+    }
+}
+
+/* Para corrigir problema do portfolio no mobile */
+@media (max-width: 500px) {
+    .imgPortfolio {
         width: 100%;
-        background-color: #0a0a0a;
-        position: absolute;
-        top: 100px;
-        left: 0;
+        max-width: 300px;
     }
-
-    nav.show {
-        display: flex;
-    }
-
-    .mobile-menu-icon {
-        display: block;
-        position: absolute;
-        right: 20px;
-    }
-
-    .header-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-        padding: 10px 20px;
-    }
-      
-    /* Deixa a logo exatamente no centro absoluto */
-    .logo {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-      
-    /* Ícone do menu no mobile */
-    .mobile-menu-icon {
-        display: none;
-    }
-      
-    /* Esconde menu no mobile */
-    @media (max-width: 768px) {
-        nav {
-            display: none;
-            position: absolute;
-            top: 60px;
-            right: 0;
-            width: 100%;
-            background: #000;
-            flex-direction: column;
-        }
-      
-        nav.active {
-            display: flex;
-        }
-      
-        .mobile-menu-icon {
-            display: block;
-            z-index: 2;
-        }
+    
+    .portfolioCard {
+        padding: 15px;
     }
 }
