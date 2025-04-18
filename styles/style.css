@@ -386,6 +386,86 @@ body {
     font-size: 19px;
     color: #eee;
 }
+
+/* Seção Portfólio */
+.portifolionominal {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #1B242B;
+  }
+  
+  .portifolionominal h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: #fff;
+  }
+  
+  /* Carrossel */
+  .carousel {
+    position: relative;
+    max-width: 350px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  /* Slides */
+  .portifolionominal-slide {
+    display: none;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .portifolionominal-slide.active {
+    display: block;
+  }
+  
+  /* Cartão de portfólio (semelhante ao .testimonial) */
+  .portifolionominal .portifolionominal {
+    background: #151515;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .portifolionominal img {
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #333;
+  }
+  
+  /* Texto */
+  .portifolionominal .quote {
+    font-style: italic;
+    font-size: 19px;
+    color: #ddd;
+    margin-bottom: 10px;
+  }
+  
+  .portifolionominal .author {
+    font-weight: bold;
+    font-size: 19px;
+    color: #eee;
+  }
+  
+  /* Botão Visualizar Site */
+  .viewProject a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #58A6FF;
+    color: #000;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  .viewProject a:hover {
+    background-color: #3d6ba0;
+  }
+  
   
 /* Contact Section */
 .contact {
@@ -761,4 +841,5 @@ body {
     .portfolioCard {
         padding: 15px;
     }
+    
 }

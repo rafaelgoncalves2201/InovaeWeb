@@ -65,3 +65,15 @@ function fecharTexto() {
   const box = document.getElementById("whatsappTextBox");
   box.style.display = "none";
 }
+
+// Carrossel do portfólio
+let indexPortfolio = 0;
+const portfolioSlides = document.querySelectorAll('#portfolio .portifolionominal-slide');
+
+function showPortfolioSlide() {
+  portfolioSlides.forEach(slide => slide.classList.remove('active'));
+  portfolioSlides[indexPortfolio].classList.add('active');
+  indexPortfolio = (indexPortfolio + 1) % portfolioSlides.length;
+}
+showPortfolioSlide(); // Mostra o primeiro slide
+setInterval(showPortfolioSlide, 4000);
