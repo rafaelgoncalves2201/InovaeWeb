@@ -1,83 +1,136 @@
-@media screen and (max-width: 600px) { /* CELULAR */ 
+/* Melhorando container no mobile */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 0;
+    height: auto;
+}
 
-    .logo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+.header-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
 
-    .logo-img {
-        width: 300px;
-        margin-right: 20px;
-    }
+.logo {
+    position: static;
+    transform: none;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    #h1-inicio {
-        font-size: 25px;
-    }
+.logo-img {
+  max-height: 120px;
+  height: auto;
+  width: auto;
+  object-fit: contain;
+}
 
-    .hero {
-        flex-direction: column;
-        text-align: center;
-      }
-    
-      .hero-text {
-        padding-right: 0;
-      }
-    
-      .hero-image {
-        margin-top: 30px;
-        text-align: center;
-      }
-    
-      .btn {
-        padding: 14px 28px;
-        font-size: 16px;
-      }
+nav {
+    display: block;
+    width: 100%;
+}
 
-      #contact-btn {
-        position: relative;
-        z-index: 10;
-      }
+nav ul {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
 
-      #contact-btn {
-        pointer-events: auto;
-      }
+nav ul li {
+    margin: 10px 0;
+}
 
-    .benefits {
-        padding: 0px 0;
-    }
+.redesSociaisHeader {
+    display: none; /* opcional: esconda no mobile, se necessário */
+}
 
-    .benefits-container {
-        gap: 5px;
-    }
+  .hero {
+      flex-direction: column;
+      text-align: center;
+      padding: 130px 20px 60px;
+  }
 
-    .portfolio {
-        gap: 0px;
-    }
+  .hero-text h1 {
+      font-size: 28px;
+  }
 
-    .flexCardPortfolio {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        gap: 40px;
-    
-        background-color: #1E2F3F;
-        padding: 20px;
-    }
+  .hero-text p {
+      font-size: 16px;
+  }
 
-    .portfolioCard {
-        padding: 35px 20px;
-        background-color: #58a6ff27;
-        border-radius: 7px;
-        transition: 0.2s;
-    }
+  .hero-image {
+      text-align: center;
+      margin-top: 30px;
+  }
 
-    .footer-links ul li a{
-        margin: -5px;
-    }
+  .benefits-container,
+  .services-container {
+      flex-direction: column;
+      align-items: center;
+  }
 
-    .hero-image img {
-        width: 350px;
-    }
+  .benefit-item,
+  .service-card {
+      width: 100%;
+      max-width: 90%;
+  }
+
+  .portfolioCard {
+      width: 100%;
+      max-width: 90%;
+      padding: 20px;
+  }
+
+  .imgPortfolio {
+      width: 100%;
+      height: auto;
+  }
+
+  .footer-container {
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  .footer-links ul {
+      flex-direction: column;
+      gap: 10px;
+  }
+}
+
+/* Mobile bem pequeno (ex: iPhone SE, Galaxy A01) */
+@media (max-width: 480px) {
+  header {
+      height: 70px;
+      padding: 0 10px;
+  }
+
+  .header-content {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+  }
+
+  .logo-img {
+      max-height: 60px;
+  }
+
+  .hero-text h1 {
+      font-size: 24px;
+  }
+
+  .section-title {
+      font-size: 24px;
+  }
+
+  .testimonial .quote,
+  .testimonial .author {
+      font-size: 16px;
+  }
+
+  .whatsapp-text-box {
+      font-size: 12px;
+      padding: 8px 25px 8px 12px;
+  }
 }
