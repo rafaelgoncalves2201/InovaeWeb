@@ -77,3 +77,8 @@ function showPortfolioSlide() {
 }
 showPortfolioSlide(); // Mostra o primeiro slide
 setInterval(showPortfolioSlide, 4000);
+
+function fecharTexto() {
+  const box = document.getElementById("whatsapp-popup");
+  box.style.display = "none";
+}
