@@ -87,6 +87,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 }
 
 .hero-text {
@@ -207,7 +208,14 @@ body {
 /* Services Section */
 .services {
     padding: 150px 10 0px;
-    background-color: #0a0a0a;
+    background: linear-gradient(to bottom, #000000, #121212);
+    height: 70vh;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.107);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .section-title {
@@ -266,9 +274,96 @@ body {
     line-height: 1.5;
 }
 
-/* Portfolio */
-.portfolio {
+/* portfolio DESKTOP */
+.portfolio-desktop {
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    padding: 50px;
+}
+
+.titlePortfolio {
+    margin-bottom: 30px;
+}
+
+.flex-top {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.flex-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 30px;
+
+    gap: 40px;
+}
+
+.box-site {
+    text-align: center;
+    background-color: #121212;
+    border-radius: 6px;
+    padding: 10px;
+
+    width: 350px;
+    height: 280px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-site img {
+    width: 300px;
+    border-radius: 6px;
+}
+
+.viewSite p {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.viewSite a {
+    /* background-color: #36699e; */
+    background-image: linear-gradient(to left, #31455c, #405d7c, #36699e);
+    background-size: 500% 100%;
+    animation: degrade-animado 1s infinite alternate;
+    color: #fff;
+    padding: 5px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+
+.viewSite a:hover {
+    transform: translateY(-2px);
+}
+
+/* ATIVANDO A ANIMAÇÃO DO BOTAO */
+@keyframes degrade-animado {
+    0% {
+        background-position-x: 0%;
+    }
+    100% {
+        background-position-x: 100%;
+    }
+}
+
+/* Portfolio MOBILE */
+#portfolio {
+    display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -640,8 +735,8 @@ body {
 
 .whatsapp-flutuante{
     position: fixed;
-    bottom: 30px;
-    right: 20px;
+    bottom: 50px;
+    right: 40px;
     width: 50px; /* Tamanho da caixa */
     height: 50px;
     background-color: #25D366; /* Fundo da bolinha (opcional) */
@@ -665,8 +760,8 @@ body {
 
 .whatsapp-popup {
     position: fixed;
-    bottom: 30px;
-    right: 90px; /* ajustado para aparecer ao lado esquerdo do botão */
+    bottom: 47px;
+    right: 110px; /* ajustado para aparecer ao lado esquerdo do botão */
     background-color: #fff;
     border: 2px solid #25D366;
     border-radius: 10px;
@@ -674,7 +769,7 @@ body {
     font-size: 14px;
     color: #000;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    max-width: 240px;
+    max-width: 300px;
     z-index: 9999;
     display: block; /* mostra sempre que carrega */
     animation: fadeIn 0.4s ease;
