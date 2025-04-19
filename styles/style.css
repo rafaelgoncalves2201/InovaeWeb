@@ -276,10 +276,14 @@ body {
 
 /* portfolio DESKTOP */
 .portfolio-desktop {
-    height: 100vh;
+    height: 120vh;
     width: 100vw;
     text-align: center;
-    padding: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .titlePortfolio {
@@ -297,9 +301,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
     margin-top: 30px;
-
     gap: 40px;
 }
 
