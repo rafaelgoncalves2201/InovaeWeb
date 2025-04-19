@@ -1,5 +1,9 @@
 /* Melhorando container no mobile */
 @media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+}    
+
   header {
     padding: 15px 0;
     height: auto;
@@ -120,6 +124,39 @@ nav ul li {
   .footer-links ul {
       flex-direction: column;
       gap: 10px;
+  }
+
+  .whatsapp-flutuante{
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    width: 50px; /* Tamanho da caixa */
+    height: 50px;
+    background-color: #25D366; /* Fundo da bolinha (opcional) */
+    border: 3px solid #25D366; /* Verde do WhatsApp */
+    border-radius: 50%; /* Deixa redondo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease; /* Animação suave */
+    z-index: 999; /* Garante que fique por cima */
+}
+
+.whatsapp-popup {
+    position: fixed;
+    bottom: 30px;
+    right: 80px; /* ajustado para aparecer ao lado esquerdo do botão */
+    background-color: #fff;
+    border: 2px solid #25D366;
+    border-radius: 10px;
+    padding: 10px 10px;
+    font-size: 14px;
+    color: #000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    max-width: 300px;
+    z-index: 9999;
+    display: block; /* mostra sempre que carrega */
+    animation: fadeIn 0.4s ease;
   }
 }
 
