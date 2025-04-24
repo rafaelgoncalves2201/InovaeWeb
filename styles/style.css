@@ -424,8 +424,8 @@ body {
     text-decoration: none;
 }
 
-/* Depoimentos */
-.testimonials {
+/* Depoimentos Ativar quando tiver clientes*/
+/* .testimonials {
     padding: 60px 20px;
     background-color: #080808;
     text-align: center;
@@ -483,7 +483,7 @@ body {
     font-weight: bold;
     font-size: 19px;
     color: #eee;
-}
+} */
 
 /* Seção Portfólio */
 .portifolionominal {
