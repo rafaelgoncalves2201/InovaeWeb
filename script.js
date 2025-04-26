@@ -82,3 +82,12 @@ function fecharTexto() {
   const box = document.getElementById("whatsapp-popup");
   box.style.display = "none";
 }
+
+// accordions
+function toggleAccordion(button) {
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('.icon');
+  
+  content.classList.toggle('open');
+  icon.classList.toggle('rotate');
+}
